@@ -12,7 +12,7 @@ function App() {
         Fondo oscuro con Tailwind
       </h1>
 
-      <div className="mt-6 bg-secondary p-4 rounded">
+      <div className="mt-6 bg-target p-4 rounded">
         Caja secundaria
       </div>
     </div>
