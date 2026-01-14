@@ -1,21 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { Route, Routes } from 'react-router-dom'
+import Contacto from './components/contacto'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
     return (
-    <div className="min-h-screen bg-background text-primary p-8">
-      <h1 className="text-4xl font-serif">
-        Fondo oscuro con Tailwind
-      </h1>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <div className="min-h-screen bg-background text-primary p-8">
+            <h1 className="text-4xl font-serif">
+              Fondo oscuro con Tailwind
+            </h1>
+            <div className="mt-6 bg-target p-4 rounded">
+              Caja secundaria
+            </div>
+          </div>
+        }
+      />
 
-      <div className="mt-6 bg-target p-4 rounded">
-        Caja secundaria
-      </div>
-    </div>
+      <Route path="/contacto" element={<Contacto />} />
+    </Routes>
   )
 }
 
